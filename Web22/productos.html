@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="contenedor-central-lista">            <!--Contenedor Central de la barra Lateral y el titulo Modulos Instalables-->
+        
+        <div class="barra">
+            <h1 class="titulo-lista">Modulos Instalables</h1>
+            <ul class="lista-productos">
+                
+                <li id="ID_farmacia"><h1 class="producto">Farmacias</h1></li>
+                <li id="ID_cadenas"><h1 class="producto">Cadenas de Farmacias</h1></li>
+                <li id="ID_droguerias"><h1 class="producto">Droguerías</h1></li>
+                <li id="ID_clinicas"><h1 class="producto">Clínicas</h1></li>
+                <li id="ID_obras_sociales"><h1 class="producto">Obras Sociales</h1></li>
+                
+            </ul>      
+        </div>
+          
+        <p id="ID_parrafo" class="parrafo-lista"></p>      
+          
+    </section>
+
+
+    <section class="contenedor-titulo-tabla">                  <!--Contenedor de los inputs y botones del formulario de la Tabla-->
+        <section class="crud_section">
+
+            <div class="input-tabla">
+                <label for="modulo">Modulo: </label>
+                <input id="ID_modulo" type="text" name="modulo" value=""/>
+            </div>
+
+            <div class="input-tabla">
+                <label for="licencia">Licencia: </label>
+                <input id="ID_licencia" type="number" name="licencia" value=""/>
+            </div>
+
+            <div class="input-tabla">
+                <label for="abono">Abono Mensual: </label>
+                <input id="ID_abono" type="number" name="abono" value=""/>
+            </div>
+    
+            <div class="boton-tabla">
+                <input id="ID_cargar1" type="button" value="Cargar Modulo">
+            </div>
+
+            <div class="input-tabla">
+                <label for="licencia">Tope Licencia: </label>
+                <input id="ID_tope_licencia" type="number" name="tope_licencia" value=""/>
+            </div>
+
+            <div class="boton-tabla">
+                <input id="ID_boton_tope_licencia" type="button" value="Filtrar Busqueda">
+            </div>
+
+          
+        </section>
+
+        <section class="contenedor-titulo-tabla-interno">       <!--Div de la sección Tabla-->
+            <h1 class="titulo-tabla">PRECIOS</h1>
+            <table class="tabla-costos">
+                <thead>
+                    <tr>
+                        <th>Módulo</th>
+                        <th>Licencia</th>
+                        <th>Abono Mensual</th>
+                    </tr>
+                </thead>
+                <tbody id="ID_cuerpo-tabla">
+                
+                </tbody>
+            </table>
+        </section>
+    
+    </section> 
+
+     
+</body>
+</html> 

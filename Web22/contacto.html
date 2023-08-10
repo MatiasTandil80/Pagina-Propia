@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <section class="contenedor-central-form">                       <!--Contenedor del Formulario de Contacto-->
+        <h1 class="titulo-formulario">FORMULARIO DE CONTACTO</h1>
+        <form class="formulario">
+            <label for="nombre">Apellido y Nombre:</label>
+            <input id="ID_nombre" type="text" name="nombre" value=""/>
+
+            <label for="email">Email:</label>
+            <input id="ID_email" type="text" name="email" value=""/>
+
+            <label for="asunto">Asunto:</label>
+            <input id="ID_asunto" type="text" name="asunto" value=""/>
+                
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="ID_mensaje" cols="30" rows="10"></textarea>
+        </form>
+        
+        <section class="section_capcha">                        <!--Contenedor de la Sección Captcha-->
+           
+            <label  id="ID_label_capcha">Ingrese: </label>
+            <input  type="text" id="ID_capcha" >
+
+            <button id="ID_aceptar_capcha" >Aceptar</button>
+            <label  id="ID_label_regenera_capcha"></label>            
+         
+            <button type="button" id="ID_regenera_capcha" > 
+            <img class="imagen" src="images/captcha.jpg"  /></a> </button>                
+            <button  id="ID_enviar_contacto" >Enviar</button>
+         
+
+        </section>
+    </section>    
+
+</body>
+</html> 

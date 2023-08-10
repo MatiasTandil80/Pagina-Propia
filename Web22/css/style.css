@@ -1,0 +1,298 @@
+/*#region TAGS*/
+body { /* se establece el tipo de letra para todo el sitio */
+    font-family: 'Verdana', 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; /*Porque el body trae un margin por defecto*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*requisito para pedirle al footer que se coloque debajo del body*/
+    color: white;
+    font-size: 2vh;
+    background-color: rgb(144, 166, 168);}
+
+/*#endregion*/
+
+
+/*#region CLASES*/
+
+/*#region COMPARTIDAS*/
+.cabecera {
+    background: linear-gradient(to left, rgb(192, 233, 245), white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /*centro los elementos en la cabecera*/
+    border-bottom: 5px solid rgb(205, 224, 205);
+    position: fixed;}
+
+.lista-menu {
+    display: flex; /*los botones de la barra queden pegados*/
+    flex-direction: column;
+    list-style: none; /*eliminar el punto de cada elemento de la lista*/
+    justify-content: space-around; /*centrar los botones*/ }
+
+
+.lista-menu{display: none;}
+
+.mostrar-lista { display:flex; /*clase  invocada desde el js para mostrar la lista con el boton*/ }
+
+.boton-barra { /*Botón del menú en el modo móvil*/
+    text-decoration: none;  
+    color: black;  
+    font-size: 25px;
+    margin: 1vw;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    padding: 0.5vh 1vw;}
+
+.boton-barra:hover {
+    color:#88888875;
+    background: #beedf2; /*color cuando paso el mouse por encima*/}
+
+.imagen-redes {/*Redes del Footer*/
+    max-width: 5vw;
+    max-height: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vh;}
+
+.lista-redes {
+    display: flex;
+    list-style: none;}
+
+.titulo-pie {
+    color: rgb(144, 166, 168); /*color de la letra del titulo*/
+    display: inline; /*Tengo que poner inline porque el titulo es elemento block*/
+    padding-right: 5vw; /*Traigo el titulo derecho del footer, un poco más a izquierda*/}
+
+.pie {
+    background: linear-gradient(to left, rgb(192, 233, 245), white); /* color de fondo del titulo*/
+    width: 100%;
+    align-self: flex-end;
+    display: flex; 
+    justify-content: space-between; /*Ubico los elementos del pie a izq y der*/
+    align-items: center; /*centro las redes y el titulo derecho*/
+    margin-top:auto; /*Coloca el footer debajo del ultimo elemento del body*/}
+
+/*#endregion COMPARTIDAS*/
+
+
+/*#region INDEX.html*/
+.imagen-index{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url(../images/fondo_celular.jpg); /* cargo imagen polarizada*/
+    height: 40vh;
+    background-repeat: no-repeat;
+    padding-top: 50vh; 
+    background-position: center center;} /*deja la imagen siempre centrada*/
+
+.imagen-central {
+    display: block; /*Necesario para que la imagen quede centrada*/
+    margin: auto;}
+
+.texto-central {
+    box-shadow: 0 0 55px 5px #a4bfc3;
+    padding: 1%;
+    width: 95%;
+    margin: 2vh auto;
+    color: black;}
+
+/*#endregion INDEX.html*/
+
+
+/*#region PRODUCTOS-SOFTWARE.html*/
+.contenedor-central-lista {      
+    background-image: url(../images/imagen-lista.jpg);
+    padding-top: 9vh; 
+    display: flex;
+    flex-direction: column;} /*Defino propiedades de la altura e imagen detras de la lista de productos*/
+
+.titulo-lista{/*Propiedades del Titulo MODULOS INSTALABLES*/
+    font-size: 3vh;
+    padding-top: 1vh;
+    display: flex;
+    justify-content: center;
+    color: rgb(61, 56, 56);}
+
+.barra{             /*Propiedades de la Barra Lateral Izquierda en la Pestaña Productos*/
+    width: 100%;
+    margin-top: 3vh;}
+    
+.lista-productos {          
+    list-style:none;
+    padding-left: 0%;}
+
+.producto{          /*Propiedades de cada producto de la barra lateral*/
+    text-decoration: none;
+    transition: .5s all;
+    color: white;
+    display: block;
+    padding: 3vh;}
+    
+.producto:hover{    /*Le aplico un hover de color azul al seleccionarse el producto*/
+    color: grey;
+    background-color:rgba(57, 121, 160, 0.98);
+    padding: 5vh;
+    border-radius:  5%;}
+
+.parrafo-lista {   /*Propiedades del Parrafo Central de cada Producto*/                     
+    font-size: 2vh;
+    border-style: inset none inset none;
+    box-shadow: 10px 10px 20px black;
+    padding: 5%;
+    padding-bottom: 1%;
+    border-width: 1vh;
+    border-color: lightblue;
+    border-radius: 5%; 
+    max-height: fit-content;} 
+
+.crud_section{              /*Propiedades del Formulario de la Tabla Productos*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60vw;
+    padding-top: 4%;}
+
+.input-tabla, .boton-tabla{     
+    display: flex;
+    flex-direction:row; 
+    margin: 2%;}
+
+.contenedor-titulo-tabla-interno{    /*Propiedades del contenedor de la Tabla y el Titulo Precios*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 4%; /*distancia de la tabla al footer*/}
+
+.titulo-tabla, .titulo-formulario {text-align: center;}   /*Ubico al centro el titulo de la tabla*/
+
+.tabla-costos {
+    font-size: 100%;
+    width: 100%;}
+
+.tabla-costos th {  /* Defino propiedades de la fila cabecera*/
+    background-color: #1c2b2ee5;  
+    border: inset 3px;
+    border-color: rgb(120, 120, 123);}
+
+.tabla-costos td {
+    border: solid 1px ;     /*muestro bordes de celda de 1px, y con el texto centrado*/
+    text-align: center;}
+
+.tabla-costos tr:hover { /* con el hover sobre cada item de la tabla logramos un cambio de estilo al pasar el mouse por encima */
+    background: rgb(230, 235, 235); 
+    color:rgb(105, 130, 130); /*pinto el texto al pasar por encima con el mouse*/ }
+
+.tabla-costos {overflow-x: auto;}
+
+.contenedor-titulo-tabla {          /*Sección que contiene a todo el formulario junto con la Tabla PRECIOS*/
+    overflow-x:scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+/*#endregion PRODUCTOS-SOFTWARE.html*/
+
+
+/*#region CONTACTO.html*/
+.contenedor-central-form { /*Defino propiedades de la altura e imagen detras del formulario de contacto*/
+    background-image: url(../images/email.jpg);
+    display: flex; 
+    align-items: center; /*centro las redes y el titulo derecho*/
+    flex-direction: column;
+    min-width: 90%;
+    padding-top: 15%;
+    height: 105vh;}
+
+.titulo-formulario {padding-top: 9vh;}
+
+.formulario {           /*Propiedades del Formulario de Contacto*/
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 90%;}
+
+.formulario label{ /*Defino propiedades de los label encima de los inputs*/
+    margin: 1vh;
+    font-size: large;}
+
+.botones-capcha{margin:2%}
+
+/*#endregion CONTACTO.html*/
+
+/*#endregion CLASES*/
+
+
+/*#region ID*/
+#boton-barra { /*tamaño del boton*/
+    margin: 2%;
+    border-color: aquamarine; /*defino el color del borde del boton de la barra en modo movil*/
+    border-radius: 10%;    
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);}
+
+#ID_logo {display: none;} /*oculto el logo del header en el modo movil*/
+
+#ID_capcha {width: 3%;}
+
+#ID_label_capcha, #ID_label_regenera_capcha{
+    font-weight: bold;
+    padding-left: 6%;}
+.section_capcha{
+    margin-left: 5%;
+    margin-right: 3%;
+    }
+
+#ID_regenera_capcha{margin-top: 3%;}
+/*#endregion ID*/
+
+
+/*********************************************************************************************************************************/
+/*#region MEDIA*/
+@media only screen and (min-width: 681px){      /*Propiedades en modo Desktop*/
+    .imagen-index{
+        margin-top: 9vh;
+        padding-top: 50vh;
+        background-repeat: no-repeat;
+        background-position: center center;/*deja la imagen siempre centrada*/
+
+        background-image: url(../images/centrocomputos_logo.jpg);   /*Imagen Central del index*/
+        height: 20vh;    }
+
+    .cabecera, .lista-menu{flex-direction: row;}
+    .lista-menu{display:flex;}
+
+    #ID_logo{display: flex;} 
+
+    #ID_boton-barra{display: none;}
+
+    .contenedor-central-lista { /*Defino propiedades de la altura e imagen detras de la lista de productos*/
+        flex-direction: row;
+        height: 80vh;}
+
+    .barra{    /*propiedades de la lista de productos*/
+        width: 25vw;
+        height: 45vh;
+        font-size: 1vw;}
+    
+    .parrafo-lista{ /*propiedades del parrafo que aparece en la pestaña productos*/
+        width: 50vw;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        font-size: 3vh;}
+
+    .contenedor-titulo-tabla{ /*propiedades del contenedor central de la parte inferior de la pestaña productos*/
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: flex-start;}
+
+    .contenedor-central-form{/*propiedades del formulario en modo desktop. Defino alto y desplazamiento del titulo hacia abajo*/
+        height: 95vh;
+        padding-top: 2%;}
+
+    .formulario{width: 70%;} 
+    .section_capcha{width: 70%;}
+    
+    .crud_section{width: 30vw;}
+}
+
+/*#endregion MEDIA*/
+
